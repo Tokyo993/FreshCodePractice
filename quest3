@@ -1,0 +1,76 @@
+// Задание 1
+function sumTo(m,n) {
+    let sum = 0
+    for (let i = m; i <= n; i++) {
+      sum += i
+    }
+    return sum
+  }
+  
+console.log( sumTo(1,3))
+
+// Задание 2
+
+function sumTo2(m,n){
+    let sum = 0;
+    while (m <= n){
+        sum += m
+        m++
+    }
+    return sum
+}
+
+console.log(sumTo2(1,4))
+
+// Задание 3
+numbers = [1,0,1,0,0,5,15];
+
+// 3.1*
+// for ( let i = 0; i < 10; i++ ) {
+//        var a = Math.round( Math.random() * 100 )
+//        numbers.push(a)
+//     }
+
+// console.log(numbers)
+
+// 3.2
+console.log("В массиве " + numbers.length + " чисел")
+
+// 3.3
+
+for (let i = 0; i < numbers.length; i+=2)
+            {
+                console.log(numbers[i]+ " элемент под индексом " + i);
+            }
+
+
+// 3.4
+
+let result = numbers.filter(function(elem) {
+  if (elem % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log("элементы которые делятся на 2 " + result);
+
+// 3.5
+
+for(let i = 0; i < numbers.length - 1; i++){
+  if(numbers[i] === 0){
+    console.log("Элемент под индексом " + i + " = 0")
+  }
+}
+
+// 3.6
+
+  let nullNum = 0;
+
+for(let i = 0; i < numbers.length-1; i++){
+    if(numbers[i] === 0){
+      nullNum += 1
+    }
+}
+console.log('Количество нулей в массиве: ' + nullNum)
