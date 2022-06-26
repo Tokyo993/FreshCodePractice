@@ -64,3 +64,75 @@ var numbers = [ 0,-1,-2,3,-5,0,2,1].filter(function(num) {
   return num > 0;
 })
 console.log(numbers)
+
+// Задание 6
+class Painter {
+  countWork = 0
+constructor(name, surname, contact)
+{
+  this.name= name,
+  this.surname = surname,
+  this.contact = contact
+}
+set countPictures(count){
+  this.countWork = count
+}
+
+get countPictures (){
+	return this.countWork
+}
+
+
+ printPainterInfo = (painter)=>{
+  return "Художник "+ painter.name +" "+ painter.surname +" его контактные данные " + painter.contact
+ }
+}
+ 
+class Pictures {
+  constructor(picName, year, technique, size )
+  {
+    this.picName= picName,
+    this.year = year,
+    this.technique = technique,
+    this.size = size
+  }
+}
+
+let dali = new Painter("Сальвадор", "Дали", 0553434334)
+let picture1 = new Pictures("Слоны", 1948, "Акрил", "90х61см")
+let allPic = [picture1]
+console.log("Картины ", allPic)
+dali.countPictures = allPic.length
+
+console.log("Количество картин: " + dali.countPictures)
+console.log(dali.printPainterInfo(dali))
+
+// Задание 7
+// решение находится в этом репозитории в файле "clickButton"
+
+// Задание 8
+// HTML код
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script src="script.js"></script>
+	<body>
+		<p class="lor"> Lorem ipsum is</p>
+		<p class="lor"> Lorem ipsum is </p>
+		<p class="lor"> Lorem ipsum is </p>
+		<button id="who">какой ряд?</button>
+	</body>
+</html>
+
+// JS код
+let p = document.querySelectorAll('.lor')
+let butt = document.querySelector('#who')
+
+butt.addEventListener('click', function(){
+	for(let i = 0; i < p.length; ){
+		let par = p[i++]
+        par.innerHTML = i + " " + par.innerHTML
+    }
+	button.setAttribute('disabled', true)
+});
