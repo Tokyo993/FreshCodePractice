@@ -135,4 +135,4 @@ butt.addEventListener('click', function(){
         par.innerHTML = i + " " + par.innerHTML
     }
 	button.setAttribute('disabled', true)
-});
+})
